@@ -1,0 +1,62 @@
+---
+title: "SVM sensitivity compared to others"
+author: "Michael Belias"
+date: "12/20/2021"
+output: pdf_document
+classoption: onecolumn
+header-includes:
+- \setlength{\columnsep}{18pt}
+bibliography: bibliography.bibtex
+csl: springer-vancouver.csl
+keywords: "SVM, simulation, feature noise, Machine learning"
+---
+
+# Abstract
+
+**Background:** Noise in data is a topic of concern in machine learning because it may cause inaccurate models. However, it is unclear how much SVM
+
+**Objective:** To assess the sensitivity of SVM compared to popular machine learning algorithms under different scenarios with feature/attribute noise.
+
+**Methods:** We simulated data with different scenarios Results:
+
+**Conclusion:**
+
+```{r setup, include=FALSE, echo=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+cat("\\onecolumn")
+```
+
+\clearpage
+
+# Introduction
+
+Real-world data often may contain noise from various sources. However, machine learning methods are developed under the assumption that data are clean. Applying them on noisy data may produce inaccurate models. However, not all methods are expected to be equally affected. For instance,
+
+
+Atla et al. @atla2011sensitivity  compared the noise sensitivity of decision trees, naïve bayes, support vector machine, and logistic regression
+
+Nettleton et al @nettleton2010study compared Naïve Bayes, classification trees, instance based learner and support vector machine. 
+
+Shanthini et al. @Shanthini2019 compared
+
+Shi and Liu @shi2011naive compared naïve Bayes and support vector machine
+
+
+This paper is organised as follows. In the methods section we shortly introduce machine learning methods and noise definitions. We provide the simulation algorithm and setup. In the results section we show the performance of the methods mentioned above. Finally, in the conclusion section we provide conclusions about the performance of the algorithms on different data-sets and various levels of noise.
+
+# Methods
+
+Real-world data may contain noise. However, noise is often related to the way data were gathered and processed. In that sense noise may come from different sources and may appear in different forms. Nettleton et al. @nettleton2010study advocates that the two main sources are measurement error and random error. Measurement error is the difference between a measured quantity and its true value , while random error is noise occurring due to the random nature of an experiment. Another type of noise may be due to missing data.
+
+To assess the effect of feature noise we simulated data 
+
+
+
+
+
+# Results
+
+# Conclusion
+
+\clearpage
+# References
