@@ -75,7 +75,7 @@ getSimulatedData <- function(
   
   cat(summary(trainingData))
   
-  trainingData
+  trainingData = as.data.frame(trainingData)
 }
 
 
