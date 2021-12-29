@@ -27,9 +27,8 @@ cat("\\onecolumn")
 ```
 
 \clearpage
- 
- 
- 
+
+
 # Introduction
 
 Real-world data often may contain noise from various sources. However, machine learning methods are developed under the assumption that data are clean. Applying them on noisy data may produce inaccurate models. However, not all methods are expected to be equally affected. For instance,
