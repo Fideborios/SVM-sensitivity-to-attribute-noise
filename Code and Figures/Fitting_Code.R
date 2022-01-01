@@ -12,6 +12,26 @@ probability_of_label_1 <-70
 noiseAmplitudes<- "0 , .1,10"
 correlationDirectionality<- "1,-1,2,-56"  
 
+
+
+
+create_train_test <- function(data, size = 0.8, train = TRUE) {
+  n_row = nrow(data)
+  total_row = size * n_row
+  train_sample <- 1: total_row
+  if (train == TRUE) {
+    return (data[train_sample, ])
+  } else {
+    return (data[-train_sample, ])
+  }
+}
+
+
+
+
+
+
+
 simulatedData<- getSimulatedData(noOfObservations = noOfObservations, 
                                  noOfIrrelevantFeatures = noOfIrrelevantFeatures,
                                  noOfRelevantFeatures = noOfRelevantFeatures,  
@@ -35,8 +55,14 @@ for(i in 1:1000){
   
   simulatedData$class_label = as.integer(as.logical(simulatedData$class_label))
   
-  DT.fit = 
-    
+  
+  data_train <- create_train_test(data = simulatedData, size = 0.8, train = TRUE)
+  data_test  <- create_train_test(data = simulatedData, size = 0.8, train = FALSE)
+  
+  
+  
+  DT.fit = rpart(class_label~., data_train, method = "class")
+  logistic.fit= glm(formula = class_label~., family = binomial("logit"),data_train )  
     
     
   
